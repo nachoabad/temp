@@ -186,6 +186,11 @@ img {
 	border-radius: 50%;
 }
 
+.img-wishes {
+	height: 200;
+	width: 200px;
+}
+
 .parallax {
 	z-index: 99;
 }

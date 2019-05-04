@@ -355,35 +355,42 @@ importante para arranjar o seu itinerário.</p>
 			</div>
 		</div>
 	</section>
-	<!-- Section Wishes
+	<!-- Section Wishes -->
 	<section class="wishes section text-center">
 		<div class="container">
 			<h1 class="title">Desejos</h1>
 			<p class="subtitle m-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-			<div class="wishes__slider">
-				<div class="slick slick-wishes mb-0">
-					<div class="slider__item">
-						<div class="wishes__person">
-							<img class="rounded-circle m-auto" src="img/person1.jpg" alt="slider">
+			<div class="wishes__slider" id="wishes">
+			</div>
+			<div class="col-sm-12 align-self-center">
+				<form enctype="multipart/form-data" accept-charset="UTF-8" action="https://supercollider.herokuapp.com/wishes" target="_self" method="POST" id="mG61Hd">
+					<div class="row">
+						<div class="col-md-3 col-sm-12"></div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label class="control-label">Seu nome</label>
+								<input type="text" class="form-control" name="wish[name]" required>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Seu imagen</label>
+								<br>
+								<input type="file" class="form-control" name="wish[avatar]" required>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Sua mensagem</label>
+								<textarea class="form-control" rows="3" name="wish[message]"></textarea>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col">
+									<button type="submit" class="btn btn-outline-dark rounded-0 px-3 py-1 font-weight-bold">
+										Envie seu desejo para o casal
+									</button>
+								</div>
+							</div>
 						</div>
-						<h4 class="wishes__title font-weight-bold">Alex Cooper</h4>
-						<p class="mx-auto">"With warm congratulations to a very special pair. May you always find in each other the love, laughter and happiness that only partners in life share!"</p>
 					</div>
-					<div class="slider__item">
-						<div class="wishes__person">
-							<img class="rounded-circle m-auto" src="img/person2.jpg" alt="slider">
-						</div>
-						<h4 class="wishes__title font-weight-bold">Mary Alen</h4>
-						<p class="mx-auto">"True love stories never end! Happy wedding day and may there be many more chapters in the wonderful story of your love for one another."</p>
-					</div>
-					<div class="slider__item">
-						<div class="wishes__person">
-							<img class="rounded-circle m-auto" src="img/person3.jpg" alt="slider">
-						</div>
-						<h4 class="wishes__title font-weight-bold">John Colen</h4>
-						<p class="mx-auto">"A wedding wish for two special person: love is best when shared by two. You know that together you are stronger, together you are one. Have a wonderful married life!"</p>
-					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</section>
@@ -489,7 +496,14 @@ devidamente organizado. Dosantostefany@gmail.com. +351967212697</p>
 	<script src="js/vendor/lightbox.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+  	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  	<script type="text/babel" src="js/wishes.js"></script>
+	<script>setInterval(function(){
+		$('.slick-wishes').slick({
+			dots: true,
+			arrows: false
+		}); }, 3000);
+  	</script>
 </body>
 </html>
